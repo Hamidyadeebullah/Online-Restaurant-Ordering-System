@@ -1,0 +1,161 @@
+/* my font of index.php*/
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap');
+
+:root{
+   --peru:#cd9452;
+   --black:#222;
+   --white:#fff;
+   --light-black:#666;
+   --light-white:#ccc;
+   --light-bg:#f5f5f5;
+   --dark-bg:rgba(0,0,0,.7);
+   --border:.1rem solid #aaa;
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Dosis', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: all 0.4s cubic-bezier(.43,1.1,.62,1.08);
+   text-transform: capitalize;
+}
+
+body{
+   font-size: 80.5%;
+   background-color: var(--light-bg);
+   color: var(--black);
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 6rem;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 50px auto;
+   background-color: var(--white);
+   padding: 20px;
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+}
+
+h1, h2 {
+   text-align: center;
+   color: var(--black);
+   margin-bottom: 2rem;
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-bottom: 2rem;
+}
+
+table, th, td {
+   border: var(--border);
+}
+
+th, td {
+   padding: 1.2rem;
+   text-align: center;
+   color: var(--light-black);
+}
+
+th {
+   background-color: var(--light-bg);
+   color: var(--black);
+}
+
+td {
+   background-color: var(--white);
+}
+
+.unpaid-orders h2, .paid-orders h2 {
+   font-size: 2rem;
+   margin-bottom: 1.5rem;
+   color: var(--peru);
+}
+
+.payment-form {
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+.payment-form label {
+   margin-right: 10px;
+   font-weight: bold;
+   color: var(--black);
+}
+
+.payment-form input[type="datetime-local"] {
+   padding: 5px;
+   font-size: 1.6rem;
+   border: var(--border);
+   border-radius: .3rem;
+   color: var(--black);
+   background-color: var(--white);
+}
+
+.pay-button, .back-button {
+   display: inline-block;
+   padding: 10px 20px;
+   font-size: 1.8rem;
+   text-align: center;
+   text-decoration: none;
+   color: var(--white);
+   background-color: var(--peru);
+   border-radius: .5rem;
+   margin-top: 20px;
+   cursor: pointer;
+   transition: all 0.4s ease;
+}
+
+.pay-button:hover, .back-button:hover {
+   letter-spacing: .2rem;
+   opacity: 0.9;
+}
+
+.back-button {
+   background-color: var(--black);
+}
+
+.btn-modify, .btn-cancel {
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff; /* Modify button color */
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancel {
+    background-color: #dc3545; /* Cancel button color */
+}
+
+.btn-modify:hover, .btn-cancel:hover {
+    background-color: #0056b3; /* Darker blue for Modify button on hover */
+}
+
+.btn-cancel:hover {
+    background-color: #c82333; /* Darker red for Cancel button on hover */
+}
+
+@media (max-width: 600px) {
+   .container {
+       width: 95%;
+       padding: 10px;
+   }
+
+   table {
+       font-size: 5rem;
+   }
+
+   .pay-button, .back-button {
+       font-size: 1.6rem;
+       padding: 8px 16px;
+   }
+}

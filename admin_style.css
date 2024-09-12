@@ -1,0 +1,139 @@
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+    --orange: #ff7800;
+    --black: #333;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --border: .1rem solid rgba(0,0,0,.1);
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header .logo span {
+    color: var(--orange);
+}
+
+header .navbar a {
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 0 0.8rem;
+}
+
+header .navbar a:hover {
+    color: var(--orange);
+}
+
+header .icons i {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+header .icons i:hover {
+    color: var(--orange);
+}
+
+/* Admin Dashboard */
+section {
+    padding: 1.5rem 4%;
+    margin-top: 6rem; /* Adjust to account for fixed header */
+}
+
+.admin-dashboard h2 {
+    font-size: 2rem;
+    color: var(--orange);
+    margin-bottom: 1.5rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td {
+    color: var(--light-color);
+}
+
+/* Button Styles */
+button {
+    background: var(--orange);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #ff8800;
+}
+
+button.serve-btn {
+    width: 100%;
+    display: inline-block;
+}
+
+/* Responsive for Small Screens */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th, td {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+    }
+
+    td {
+        padding: 10px 5px;
+    }
+
+    button.serve-btn {
+        width: auto;
+    }
+}

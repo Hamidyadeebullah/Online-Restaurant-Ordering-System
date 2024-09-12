@@ -1,0 +1,131 @@
+/* Namespace the styles under .login-container */
+.login-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Hide initially */
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.login-container .login-box {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.login-container .input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.login-container .input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+.login-container .input-box input:focus {
+    border-color: #ff4b5c;
+}
+
+.login-container .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.login-container .input-box input:focus ~ label,
+.login-container .input-box input:not(:placeholder-shown) ~ label {
+    top: -10px;
+    left: 15px;
+    font-size: 0.8rem;
+    color: #ff4b5c;
+    background: #ffffff;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+.login-container .input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #ff4b5c;
+}
+
+.login-container .btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff4b5c;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container .btn:hover {
+    background: #e63946;
+}
+
+.login-container p {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.login-container p a {
+    color: #ff4b5c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
